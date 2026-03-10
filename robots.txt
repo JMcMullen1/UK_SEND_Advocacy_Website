@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Allow: /images/uk-send-advocacy-logo.png
 Disallow: /images/
 
 Sitemap: https://www.uksendadvocacy.co.uk/sitemap.xml

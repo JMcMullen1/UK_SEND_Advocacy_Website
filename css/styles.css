@@ -1,26 +1,26 @@
 /* ============================================
    UK SEND Advocacy - Main Stylesheet
-   Theme: Warm Growth (Emerald & Coral)
-   Distinct, Modern, Approachable
+   Theme: British Navy & Red (Logo-matched)
+   Professional, Trustworthy, Authoritative
    ============================================ */
 
 /* CSS Custom Properties */
 :root {
-  /* Primary Colors - Emerald/Teal */
-  --primary: #0B7A6F;
-  --primary-dark: #065F57;
-  --primary-light: #10A393;
-  --primary-subtle: #E6F5F3;
+  /* Primary Colors - Navy Blue (from logo) */
+  --primary: #1B3A5C;
+  --primary-dark: #122A45;
+  --primary-light: #2A5080;
+  --primary-subtle: #E8EEF4;
 
-  /* Accent Colors - Warm Coral */
-  --accent: #E8734A;
-  --accent-dark: #D05A30;
-  --accent-light: #F09070;
+  /* Accent Colors - Union Jack Red (from logo) */
+  --accent: #C8102E;
+  --accent-dark: #A50D24;
+  --accent-light: #E8334D;
 
-  /* Warm Neutrals */
+  /* Clean Neutrals */
   --white: #FFFFFF;
-  --cream: #FBF8F4;
-  --sand: #F3EDE4;
+  --cream: #F7F9FC;
+  --sand: #EDF1F7;
 
   /* Neutral Colors - Slate */
   --gray-50: #F8FAFC;
@@ -35,10 +35,10 @@
   --gray-900: #0F172A;
 
   /* Supplementary */
-  --gold: #E5A63A;
-  --gold-light: #F5CE6E;
-  --teal: #0D9488;
-  --sky: #38BDF8;
+  --gold: #D4A843;
+  --gold-light: #F0D78C;
+  --steel-blue: #5B8DB8;
+  --sky: #4A90C4;
 
   /* Typography */
   --font-heading: 'DM Serif Display', Georgia, 'Times New Roman', serif;
@@ -62,11 +62,11 @@
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  /* Shadows - Warmer tint */
-  --shadow-sm: 0 1px 3px rgba(11, 122, 111, 0.06);
-  --shadow-md: 0 4px 12px rgba(11, 122, 111, 0.08);
-  --shadow-lg: 0 12px 24px rgba(11, 122, 111, 0.1);
-  --shadow-xl: 0 24px 48px rgba(11, 122, 111, 0.12);
+  /* Shadows - Navy tint */
+  --shadow-sm: 0 1px 3px rgba(27, 58, 92, 0.06);
+  --shadow-md: 0 4px 12px rgba(27, 58, 92, 0.08);
+  --shadow-lg: 0 12px 24px rgba(27, 58, 92, 0.1);
+  --shadow-xl: 0 24px 48px rgba(27, 58, 92, 0.12);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -246,7 +246,7 @@ p {
   border-color: var(--accent-dark);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(232, 115, 74, 0.35);
+  box-shadow: 0 8px 20px rgba(200, 16, 46, 0.35);
 }
 
 .btn--secondary {
@@ -260,7 +260,7 @@ p {
   border-color: var(--primary-dark);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(11, 122, 111, 0.35);
+  box-shadow: 0 8px 20px rgba(27, 58, 92, 0.35);
 }
 
 .btn--outline {
@@ -313,7 +313,7 @@ p {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(251, 248, 244, 0.95);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -357,7 +357,7 @@ p {
   font-size: 0.65rem;
   font-family: var(--font-accent);
   font-weight: 500;
-  color: var(--accent);
+  color: var(--steel-blue);
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -474,7 +474,7 @@ p {
   right: -80px;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(232, 115, 74, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(200, 16, 46, 0.15) 0%, transparent 70%);
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   pointer-events: none;
 }
@@ -598,12 +598,12 @@ p {
   flex-shrink: 0;
   width: 44px;
   height: 44px;
-  background: rgba(232, 115, 74, 0.2);
+  background: rgba(200, 16, 46, 0.15);
   border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-light);
+  color: var(--steel-blue);
 }
 
 .hero-card-text h4 {
@@ -996,7 +996,7 @@ p {
   left: -10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(11, 122, 111, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(27, 58, 92, 0.25) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1007,7 +1007,7 @@ p {
   right: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(232, 115, 74, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(200, 16, 46, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1105,6 +1105,12 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.footer-brand .footer-logo {
+  height: 60px;
+  width: auto;
+  margin-bottom: var(--space-md);
+}
+
 .footer-brand p {
   font-size: 0.938rem;
   color: var(--gray-400);
@@ -1118,7 +1124,7 @@ p {
 }
 
 .footer-brand .logo-text span {
-  color: var(--accent-light);
+  color: var(--steel-blue);
 }
 
 .footer-col h4 {
@@ -1140,7 +1146,7 @@ p {
 }
 
 .footer-col a:hover {
-  color: var(--accent-light);
+  color: var(--steel-blue);
 }
 
 .footer-contact-item {
@@ -1154,7 +1160,7 @@ p {
 .footer-contact-item svg {
   flex-shrink: 0;
   margin-top: 3px;
-  color: var(--accent-light);
+  color: var(--steel-blue);
 }
 
 .footer-bottom {
@@ -1183,7 +1189,7 @@ p {
 }
 
 .footer-legal a:hover {
-  color: var(--accent-light);
+  color: var(--steel-blue);
 }
 
 /* ============================================
@@ -1426,7 +1432,7 @@ p {
 .content-image {
   border-radius: var(--radius-xl);
   overflow: hidden;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   aspect-ratio: 16/10;
   display: flex;
   align-items: center;
@@ -1548,7 +1554,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--cream);
+    background: var(--white);
     padding: 6rem var(--space-xl) var(--space-xl);
     z-index: 999;
     align-items: center;
