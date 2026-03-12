@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   // ---- Header scroll effect ----
-  const header = document.querySelector('.site-header');
+  var header = document.querySelector('.site-header');
   if (header) {
     window.addEventListener('scroll', function () {
       header.classList.toggle('scrolled', window.scrollY > 50);
@@ -13,19 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ---- Mobile menu toggle ----
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  var menuToggle = document.querySelector('.menu-toggle');
+  var navLinks = document.querySelector('.nav-links');
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', function () {
       menuToggle.classList.toggle('active');
       navLinks.classList.toggle('mobile-open');
       document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
+      menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('mobile-open'));
     });
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         menuToggle.classList.remove('active');
         navLinks.classList.remove('mobile-open');
         document.body.style.overflow = '';
+        menuToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -40,12 +42,14 @@ document.addEventListener('DOMContentLoaded', function () {
       // Close all
       document.querySelectorAll('.faq-item').forEach(function (fi) {
         fi.classList.remove('active');
+        fi.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
         fi.querySelector('.faq-answer').style.maxHeight = null;
       });
 
       // Open clicked if was closed
       if (!isOpen) {
         item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
         answer.style.maxHeight = answer.scrollHeight + 'px';
       }
     });
@@ -61,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     animateElements.forEach(function (el) { observer.observe(el); });
   }
 
@@ -101,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Simulate form submission (replace with real endpoint)
       setTimeout(function () {
         btn.textContent = 'Message Sent!';
-        btn.style.background = 'var(--teal)';
+        btn.style.background = 'var(--primary)';
         contactForm.reset();
         setTimeout(function () {
           btn.textContent = originalText;
