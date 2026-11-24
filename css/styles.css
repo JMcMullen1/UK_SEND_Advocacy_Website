@@ -313,7 +313,7 @@ p {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.97);
+  background: #FFFFFF;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -328,7 +328,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-sm) var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
   max-width: var(--container-max);
   margin: 0 auto;
 }
@@ -340,7 +340,7 @@ p {
 }
 
 .logo img {
-  height: 50px;
+  height: 96px;
   width: auto;
 }
 
@@ -450,7 +450,7 @@ p {
    ============================================ */
 .hero {
   position: relative;
-  padding: 10rem 0 6rem;
+  padding: 12.5rem 0 6rem;
   background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 40%, var(--primary-light) 100%);
   overflow: hidden;
 }
@@ -462,7 +462,11 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  /* Diagonal sweep + fine pinstripes (Union Jack-inspired diagonals) */
+  background:
+    linear-gradient(115deg, transparent 0%, transparent 55%, rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0.05) 72%, transparent 72%),
+    linear-gradient(115deg, transparent 0%, transparent 74%, rgba(200, 16, 46, 0.10) 74%, rgba(200, 16, 46, 0.10) 76%, transparent 76%),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.035) 0px, rgba(255, 255, 255, 0.035) 1px, transparent 1px, transparent 22px);
   pointer-events: none;
 }
 
@@ -1196,7 +1200,7 @@ p {
    PAGE HERO (Internal Pages)
    ============================================ */
 .page-hero {
-  padding: 9rem 0 4rem;
+  padding: 11.5rem 0 4rem;
   background: linear-gradient(160deg, var(--primary-dark) 0%, var(--primary) 100%);
   text-align: center;
   position: relative;
@@ -1210,7 +1214,11 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'%3E%3Ccircle cx='20' cy='20' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  /* Diagonal sweep + fine pinstripes (Union Jack-inspired diagonals) */
+  background:
+    linear-gradient(115deg, transparent 0%, transparent 55%, rgba(255, 255, 255, 0.05) 55%, rgba(255, 255, 255, 0.05) 72%, transparent 72%),
+    linear-gradient(115deg, transparent 0%, transparent 74%, rgba(200, 16, 46, 0.10) 74%, rgba(200, 16, 46, 0.10) 76%, transparent 76%),
+    repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.035) 0px, rgba(255, 255, 255, 0.035) 1px, transparent 1px, transparent 22px);
   pointer-events: none;
 }
 
@@ -1532,7 +1540,15 @@ p {
   }
 
   .hero {
-    padding: 8rem 0 4rem;
+    padding: 9.5rem 0 4rem;
+  }
+
+  .page-hero {
+    padding: 9rem 0 3rem;
+  }
+
+  .logo img {
+    height: 68px;
   }
 
   .nav-links,
@@ -1555,7 +1571,7 @@ p {
     right: 0;
     bottom: 0;
     background: var(--white);
-    padding: 6rem var(--space-xl) var(--space-xl);
+    padding: 7.5rem var(--space-xl) var(--space-xl);
     z-index: 999;
     align-items: center;
     gap: var(--space-xl);
