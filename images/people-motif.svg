@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Decorative motif inspired by the UK SEND Advocacy logo: three figures wrapping around in an embrace -->
+  <!-- Navy figure: head top-left, body sweeping round the left side -->
+  <circle cx="112" cy="62" r="26" fill="#1B3A5C"/>
+  <path d="M178 76 A138 138 0 0 0 246 346 A190 190 0 0 1 178 76 Z" fill="#1B3A5C"/>
+  <!-- Red figure: head centre, body arcing over the top -->
+  <circle cx="208" cy="84" r="18" fill="#C8102E"/>
+  <path d="M120 178 A92 92 0 0 1 300 178 A170 170 0 0 0 120 178 Z" fill="#C8102E"/>
+  <!-- Steel-blue figure: head top-right, body sweeping down the right side -->
+  <circle cx="300" cy="96" r="21" fill="#4A7FB5"/>
+  <path d="M262 128 A112 112 0 0 1 222 336 A160 160 0 0 0 262 128 Z" fill="#4A7FB5"/>
+</svg>
